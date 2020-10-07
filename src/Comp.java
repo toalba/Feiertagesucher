@@ -1,3 +1,4 @@
+import java.util.HashMap;
 
 public class Comp {
 
@@ -9,8 +10,9 @@ public class Comp {
         Menu menu = new Menu();
         Sucher sucher = new Sucher();
         Handler handler = new Handler();
+        HashMap<String,Integer> wochentage =  sucher.sucher(handler.gLocalDates(apicon.getfeiertagObject(menu.maxdate(), menu.mindate())));
         
-        sucher.sucher(handler.gLocalDates(apicon.getfeiertagObject(menu.maxdate(), menu.mindate())));
+       
 
     }
 }

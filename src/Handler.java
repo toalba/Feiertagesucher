@@ -18,7 +18,7 @@ public class Handler {
                 {
                   LocalDate date = getDateofJSON(arr.getJSONObject(j));
                   dList.add(date);
-                }                        
+                }           
             }
             return dList;
         } catch (Exception e) {

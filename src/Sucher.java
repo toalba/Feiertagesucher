@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
 public class Sucher{
     public int montag;
@@ -7,7 +8,7 @@ public class Sucher{
     public int donerstag;
     public int freitag;
 
-    public String sucher(List<LocalDate> list)
+    public HashMap<String,Integer> sucher(List<LocalDate> list)
     {
         for (int i = 0; i < list.size(); i++) 
         {
@@ -22,13 +23,17 @@ public class Sucher{
                 case SUNDAY: break;
             }
         }
+        HashMap<String,Integer> Wochentage = new HashMap<>();
+        Wochentage.put("Montag",montag);
+        Wochentage.put("Dienstag",dienstag);
+        Wochentage.put("Mittwoch",mittwoch);
+        Wochentage.put("Donnerstag",donerstag);
+        Wochentage.put("Freitag",freitag);
         System.out.println("Montag: "+montag);
         System.out.println("Dienstag: "+dienstag);
         System.out.println("Mittwoch: "+mittwoch);
         System.out.println("Donnerstag: "+donerstag);
         System.out.println("Freitag: "+freitag);
-        return "";
+        return Wochentage;
     }
-
-
 }

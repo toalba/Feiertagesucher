@@ -16,7 +16,7 @@ public class Handler {
                 JSONArray arr= obj.getJSONArray("holidays");
                 for (int j = 0; j < arr.length(); j++)
                 {
-                  LocalDate date = getDateofJSON(arr.getJSONObject(j));
+                  LocalDate date = getDateofJSON(arr.getJSONObject(j),"holiday","date");
                   dList.add(date);
                 }           
             }
@@ -27,15 +27,16 @@ public class Handler {
         return null;
         
     }
-    public LocalDate getDateofJSON(JSONObject obj)
+    public LocalDate getDateofJSON(JSONObject obj,String n1,String n2)
     {
         try {
-            JSONObject obj2 = obj.getJSONObject("holiday");
-            return LocalDate.parse(obj2.getString("date"));
+            JSONObject obj2 = obj.getJSONObject(n1);
+            return LocalDate.parse(obj2.getString(n2));
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
-
     }
+
+
 }

@@ -29,11 +29,6 @@ public class Sucher{
         Wochentage.put("Mittwoch",mittwoch);
         Wochentage.put("Donnerstag",donerstag);
         Wochentage.put("Freitag",freitag);
-        System.out.println("Montag: "+montag);
-        System.out.println("Dienstag: "+dienstag);
-        System.out.println("Mittwoch: "+mittwoch);
-        System.out.println("Donnerstag: "+donerstag);
-        System.out.println("Freitag: "+freitag);
         return Wochentage;
     }
 }

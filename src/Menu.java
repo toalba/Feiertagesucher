@@ -42,7 +42,6 @@ public class Menu{
         Scanner s = new Scanner(System.in);
         System.out.print("Gebe das min. Jahr in Format <yyyy> ein:");
         String datum = s.next();
-        s.close();
         return datum;
     }
 

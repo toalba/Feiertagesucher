@@ -15,7 +15,7 @@ public class Comp {
         String mindate = menu.mindate();
         String maxdate = menu.maxdate();
         HashMap<String,Integer> feiertageMap =  sucher.sucher(handler.gLocalDates(apicon.getfeiertagObject(maxdate,mindate,url1)));
-        System.out.println(apicon.getferienArrays(maxdate, mindate, url2));       
+        System.out.println(handler.gferienLocalDates(apicon.getferienArrays(maxdate, mindate, url2)));       
 
     }
 }

@@ -37,6 +37,27 @@ public class Handler {
         }
         return null;
     }
+    public List<LocalDate> gferienLocalDates(List<JSONArray> jsonyearList)
+    {
+        try {
+            List<LocalDate> dList = new ArrayList<>();
+            for (int i = 0; i < jsonyearList.size(); i++) {
+
+               
+                JSONArray ar = jsonyearList.get(i);
+                System.out.println(ar.get(1));
+                JSONObject ar2 = (JSONObject) ar.get(1);
+                System.out.println(ar2);
+                
+        
+            }
+            return dList;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+        
+    }
 
 
 }

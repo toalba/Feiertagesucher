@@ -16,6 +16,7 @@ public class Comp {
         String mindate = menu.mindate();
         String maxdate = menu.maxdate();
         HashMap<String,Integer> feiertageMap =  sucher.sucher(handler.gLocalDates(apicon.getfeiertagObject(maxdate,mindate,url1)));
+<<<<<<< HEAD
         System.out.println(apicon.getferienArrays(maxdate, mindate, url2));      */ 
         try {
 			Mariadb mariadb = new Mariadb();
@@ -23,6 +24,9 @@ public class Comp {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+=======
+        System.out.println(handler.gferienLocalDates(apicon.getferienArrays(maxdate, mindate, url2)));       
+>>>>>>> e2eafbb7aafbe34943dccaff363fd85c937fd59d
 
     }
 }

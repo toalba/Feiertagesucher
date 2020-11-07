@@ -8,8 +8,5 @@
   <classpathentry kind="src" path="src"/>
   <classpathentry kind="output" path="bin"/>
   <classpathentry kind="lib" path="lib/java-json.jar"/>
-<<<<<<< HEAD
   <classpathentry kind="lib" path="lib/mariadb-java-client-2.7.0-sources.jar"/>
-=======
->>>>>>> e2eafbb7aafbe34943dccaff363fd85c937fd59d
 </classpath>

@@ -12,7 +12,7 @@ public class Mariadb {
         this.driver = "org.mariadb.jdbc.Driver";
         this.host = "jdbc:mariadb://localhost:3306/javafeiertage";
         this.user = "root";
-        this.password = "wa22er!wasser"; 
+        this.password = "****";
         Class.forName(this.driver);
         try {
             this.conn = DriverManager.getConnection(this.host, this.user, this.password);
@@ -25,5 +25,7 @@ public class Mariadb {
             e.printStackTrace();
         }
     }
+
+
 }//end JDBCExample
 

@@ -21,6 +21,7 @@ public class GUI extends Application{
     @Override
    public void start(Stage stage) {
        try {
+           Mariadb mariadb = new Mariadb();
            // Angeben wie die Achsen sein sollen
            final CategoryAxis xAxis = new CategoryAxis();
            final NumberAxis yAxis = new NumberAxis();
@@ -34,6 +35,7 @@ public class GUI extends Application{
            xAxis.setLabel("Wochentage");
            yAxis.setLabel("Anzahl");
            XYChart.Series series1 = new XYChart.Series();
+           series1.setName("");
            for (int i = 0 ;i<Wochentage.size();i++)
            {
                series1.getData().add(new XYChart.Data(Wochentage.get(i),feiertage.get(Wochentage.get(i))));
@@ -46,6 +48,7 @@ public class GUI extends Application{
        } catch(Exception e) {
            e.printStackTrace();
        }
+
    }      
    public static void main(String args[]){ 
       launch(args);

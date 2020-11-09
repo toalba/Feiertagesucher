@@ -7,7 +7,7 @@ public class Mariadb {
     private String password;
     private Connection conn;
 
-    public Mariadb() throws SQLException, ClassNotFoundException {
+    public Mariadb() throws ClassNotFoundException {
         this.driver = "org.mariadb.jdbc.Driver";
         this.host = "jdbc:mariadb://localhost:3306/javafeiertage";
         this.user = "root";

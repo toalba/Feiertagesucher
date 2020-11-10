@@ -1,5 +1,5 @@
 # Feiertagesucher
-A tolle Sachn um seine Arbeitstage am betsen zu legen.
+A tolle Sachn um seine Arbeitstage am besten zu legen.
 
 - User Interface mit JavaFX
 - Diagramm mit Javafx

@@ -1,7 +1,7 @@
 # Feiertagesucher
-A tolle Sachn um seine Arbeitstage am besten zu legen.
+A tolle Sachn um seine Arbeitstage am betsen zu legen.
 
-Work-in-Progress
-
-Todo:
 - User Interface mit JavaFX
+- Diagramm mit Javafx
+- Datenbank interface mit MariaDB
+- API Request für die Feiertage

@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.util.HashMap;
+
 public class Mariadb {
     // JDBC driver name and database URL
     private String driver;
@@ -38,8 +40,30 @@ public class Mariadb {
         catch (Exception e) {
         e.printStackTrace();
         }
+    }
+    public HashMap<String,Integer> getData()
+    {
+        HashMap<String,Integer> data = new HashMap<String,Integer>();
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * from feiertage");
 
+            while(rs.next())
+            {
+                data.put("Montag",rs.getInt("Montag"));
+                data.put("Dienstag",rs.getInt("Dienstag"));
+                data.put("Mittwoch",rs.getInt("Mittwoch"));
+                data.put("Donnerstag",rs.getInt("Donnerstag"));
+                data.put("Freitag",rs.getInt("Montag"));
+            }
+            rs.close();
+            return data;
+        }
+        catch (SQLException se)
+        {
 
+        }
+        return  data;
     }
 
 

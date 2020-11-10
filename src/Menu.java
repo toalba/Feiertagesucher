@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Menu{
 
+    //Outdated
+
     private HashMap<String,String> Kalenderausw = new HashMap<String,String>();
     private void fillup()
     {

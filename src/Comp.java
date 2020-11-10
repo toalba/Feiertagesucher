@@ -1,26 +1,21 @@
+import javafx.stage.Stage;
+
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 
 public class Comp {
 
-
-    public HashMap<String,Integer> feiertage() {
+    public void feiertage(List<String> jahre,Stage stage) {
 
         String url1 = "https://deutsche-feiertage-api.de/api/v1/";
         String url2 = "https://ferien-api.de/api/v1/holidays/BY/";
         Apicon apicon = new Apicon();
-        Menu menu = new Menu();
         Sucher sucher = new Sucher();
         Handler handler = new Handler();
-        String mindate = menu.mindate();
-        String maxdate = menu.maxdate();
-        HashMap<String,Integer> feiertageMap =  sucher.sucher(handler.gLocalDates(apicon.getfeiertagObject(maxdate,mindate,url1)));
-        return feiertageMap;
-       /* try {
-			Mariadb mariadb = new Mariadb();
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+        String jahres = jahre.get(0)+" bis "+jahre.get(1);
+        sucher.sucher(handler.gLocalDates(apicon.getfeiertagObject(jahre.get(1),jahre.get(0),url1)));
+        GUI gui = new GUI();
+        gui.diagram(jahres);
     }
 }

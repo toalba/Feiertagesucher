@@ -8,7 +8,7 @@ public class Sucher{
     public int donerstag;
     public int freitag;
 
-    public HashMap<String,Integer> sucher(List<LocalDate> list)  {
+    public void sucher(List<LocalDate> list)  {
 
 
         for (int i = 0; i < list.size(); i++) 
@@ -24,12 +24,6 @@ public class Sucher{
                 case SUNDAY: break;
             }
         }
-        HashMap<String,Integer> Wochentage = new HashMap<>();
-        Wochentage.put("Montag",montag);
-        Wochentage.put("Dienstag",dienstag);
-        Wochentage.put("Mittwoch",mittwoch);
-        Wochentage.put("Donnerstag",donerstag);
-        Wochentage.put("Freitag",freitag);
         try {
             Mariadb mariadb = new Mariadb();
             mariadb.Inserttodb("INSERT INTO feiertage (Montag,Dienstag,Mittwoch,Donnerstag,Freitag) VALUES ("+montag+","+dienstag+","+mittwoch+","+donerstag+","+freitag+")");
@@ -37,6 +31,5 @@ public class Sucher{
         catch (Exception e){
             e.printStackTrace();
         }
-        return Wochentage;
     }
 }
